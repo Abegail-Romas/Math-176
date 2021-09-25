@@ -1,4 +1,4 @@
-// Programmer: Alaina Rose Plaza and Abegail Romas | 3 BS Applied Mathematics
+// Programmers: Alaina Rose Plaza and Abegail Romas | 3 BS Applied Mathematics
 // This program implements Bisection, Secant, and False Position Method
 
 #include<stdio.h>
