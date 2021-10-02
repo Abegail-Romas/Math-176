@@ -109,10 +109,17 @@ void Secant() {										// Function for Secant Method
 	double p0, p1;									// Variables for endpoints
 	int i;											// Variable for maximum iteration
 	
+	INPUT:
 	printf("\n\nEnter left interval endpoint: ");
 	scanf("%lf", &p0);
 	printf("\nEnter right interval endpoint: ");
 	scanf("%lf", &p1);
+	
+	if (p0 >= p1){
+		printf("\n\nERROR: Invalid endpoints. Please try again.");
+		goto INPUT;
+	}
+	
 	printf("\nEnter maximum number of iterations: ");
 	scanf("%d", &i);
 	
@@ -120,11 +127,7 @@ void Secant() {										// Function for Secant Method
 	double p2; 										// Variable for approximation
 	
 	while (count < i){
-		if (p0 >= p1){
-			printf("\n\nERROR: Invalid endpoints");
-			break;
-		}
-		
+	
 		if ((F(p1) - F(p0)) == 0){
 			printf("\n\nCannot Proceed. \nCause: Division by zero.");
 			break;
